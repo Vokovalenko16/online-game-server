@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{B2959308-3F8A-4B96-BAD0-C18CA1511C70}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>cxImaglib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_CRT_SECURE_NO_WARNINGS;WIN32;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)CxImag\zlib;$(ProjectDir)CxImag\jasper\include;$(ProjectDir)CxImag\jasper\jpg;$(ProjectDir)CxImag\jpeg;$(ProjectDir)CxImag\png;$(ProjectDir)CxImag\tiff</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)CxImag\zlib;$(ProjectDir)CxImag\jasper\include;$(ProjectDir)CxImag\jasper\jpg;$(ProjectDir)CxImag\jpeg;$(ProjectDir)CxImag\png;$(ProjectDir)CxImag\tiff</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)CxImag\zlib;$(ProjectDir)CxImag\jasper\include;$(ProjectDir)CxImag\jasper\jpg;$(ProjectDir)CxImag\jpeg;$(ProjectDir)CxImag\png;$(ProjectDir)CxImag\tiff</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)CxImag\zlib;$(ProjectDir)CxImag\jasper\include;$(ProjectDir)CxImag\jasper\jpg;$(ProjectDir)CxImag\jpeg;$(ProjectDir)CxImag\png;$(ProjectDir)CxImag\tiff</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CxImag\CxImage\xfile.h" />
+    <ClInclude Include="CxImag\CxImage\ximabmp.h" />
+    <ClInclude Include="CxImag\CxImage\ximacfg.h" />
+    <ClInclude Include="CxImag\CxImage\ximadef.h" />
+    <ClInclude Include="CxImag\CxImage\ximage.h" />
+    <ClInclude Include="CxImag\CxImage\ximagif.h" />
+    <ClInclude Include="CxImag\CxImage\ximaico.h" />
+    <ClInclude Include="CxImag\CxImage\ximaiter.h" />
+    <ClInclude Include="CxImag\CxImage\ximaj2k.h" />
+    <ClInclude Include="CxImag\CxImage\ximajas.h" />
+    <ClInclude Include="CxImag\CxImage\ximajbg.h" />
+    <ClInclude Include="CxImag\CxImage\ximajpg.h" />
+    <ClInclude Include="CxImag\CxImage\ximamng.h" />
+    <ClInclude Include="CxImag\CxImage\ximapcx.h" />
+    <ClInclude Include="CxImag\CxImage\ximapng.h" />
+    <ClInclude Include="CxImag\CxImage\ximatga.h" />
+    <ClInclude Include="CxImag\CxImage\ximath.h" />
+    <ClInclude Include="CxImag\CxImage\ximatif.h" />
+    <ClInclude Include="CxImag\CxImage\ximawbmp.h" />
+    <ClInclude Include="CxImag\CxImage\ximawmf.h" />
+    <ClInclude Include="CxImag\CxImage\xiofile.h" />
+    <ClInclude Include="CxImag\CxImage\xmemfile.h" />
+    <ClInclude Include="CxImag\j2k\bio.h" />
+    <ClInclude Include="CxImag\j2k\cio.h" />
+    <ClInclude Include="CxImag\j2k\dwt.h" />
+    <ClInclude Include="CxImag\j2k\fix.h" />
+    <ClInclude Include="CxImag\j2k\int.h" />
+    <ClInclude Include="CxImag\j2k\j2k.h" />
+    <ClInclude Include="CxImag\j2k\mct.h" />
+    <ClInclude Include="CxImag\j2k\mqc.h" />
+    <ClInclude Include="CxImag\j2k\pi.h" />
+    <ClInclude Include="CxImag\j2k\t1.h" />
+    <ClInclude Include="CxImag\j2k\t2.h" />
+    <ClInclude Include="CxImag\j2k\tcd.h" />
+    <ClInclude Include="CxImag\j2k\tgt.h" />
+    <ClInclude Include="CxImag\jasper\bmp\bmp_cod.h" />
+    <ClInclude Include="CxImag\jasper\bmp\bmp_enc.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jasper.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_cm.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_config.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_config2.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_debug.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_fix.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_getopt.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_icc.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_image.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_init.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_malloc.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_math.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_seq.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_stream.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_string.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_tvp.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_types.h" />
+    <ClInclude Include="CxImag\jasper\include\jasper\jas_version.h" />
+    <ClInclude Include="CxImag\jasper\jp2\jp2_cod.h" />
+    <ClInclude Include="CxImag\jasper\jp2\jp2_dec.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_bs.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_cod.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_cs.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_dec.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_enc.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_fix.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_flt.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_math.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_mct.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_mqcod.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_mqdec.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_mqenc.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_qmfb.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_t1cod.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_t1dec.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_t1enc.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_t2cod.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_t2dec.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_t2enc.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_tagtree.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_tsfb.h" />
+    <ClInclude Include="CxImag\jasper\jpc\jpc_util.h" />
+    <ClInclude Include="CxImag\jasper\jpg\jpg_cod.h" />
+    <ClInclude Include="CxImag\jasper\jpg\jpg_enc.h" />
+    <ClInclude Include="CxImag\jasper\jpg\jpg_jpeglib.h" />
+    <ClInclude Include="CxImag\jasper\mif\mif_cod.h" />
+    <ClInclude Include="CxImag\jasper\pgx\pgx_cod.h" />
+    <ClInclude Include="CxImag\jasper\pgx\pgx_enc.h" />
+    <ClInclude Include="CxImag\jasper\pnm\pnm_cod.h" />
+    <ClInclude Include="CxImag\jasper\pnm\pnm_enc.h" />
+    <ClInclude Include="CxImag\jasper\ras\ras_cod.h" />
+    <ClInclude Include="CxImag\jasper\ras\ras_enc.h" />
+    <ClInclude Include="CxImag\jbig\jbig.h" />
+    <ClInclude Include="CxImag\jpeg\jchuff.h" />
+    <ClInclude Include="CxImag\jpeg\jconfig.h" />
+    <ClInclude Include="CxImag\jpeg\jdct.h" />
+    <ClInclude Include="CxImag\jpeg\jdhuff.h" />
+    <ClInclude Include="CxImag\jpeg\jerror.h" />
+    <ClInclude Include="CxImag\jpeg\jinclude.h" />
+    <ClInclude Include="CxImag\jpeg\jmemsys.h" />
+    <ClInclude Include="CxImag\jpeg\jmorecfg.h" />
+    <ClInclude Include="CxImag\jpeg\jpegint.h" />
+    <ClInclude Include="CxImag\jpeg\jpeglib.h" />
+    <ClInclude Include="CxImag\jpeg\jversion.h" />
+    <ClInclude Include="CxImag\png\png.h" />
+    <ClInclude Include="CxImag\png\pngconf.h" />
+    <ClInclude Include="CxImag\tiff\t4.h" />
+    <ClInclude Include="CxImag\tiff\tiff.h" />
+    <ClInclude Include="CxImag\tiff\tiffcomp.h" />
+    <ClInclude Include="CxImag\tiff\tiffconf.h" />
+    <ClInclude Include="CxImag\tiff\tiffio.h" />
+    <ClInclude Include="CxImag\tiff\tiffiop.h" />
+    <ClInclude Include="CxImag\tiff\tif_dir.h" />
+    <ClInclude Include="CxImag\tiff\tif_fax3.h" />
+    <ClInclude Include="CxImag\tiff\tif_predict.h" />
+    <ClInclude Include="CxImag\tiff\uvcode.h" />
+    <ClInclude Include="CxImag\zlib\crc32.h" />
+    <ClInclude Include="CxImag\zlib\deflate.h" />
+    <ClInclude Include="CxImag\zlib\inffast.h" />
+    <ClInclude Include="CxImag\zlib\inffixed.h" />
+    <ClInclude Include="CxImag\zlib\inflate.h" />
+    <ClInclude Include="CxImag\zlib\inftrees.h" />
+    <ClInclude Include="CxImag\zlib\trees.h" />
+    <ClInclude Include="CxImag\zlib\zconf.h" />
+    <ClInclude Include="CxImag\zlib\zconf.in.h" />
+    <ClInclude Include="CxImag\zlib\zlib.h" />
+    <ClInclude Include="CxImag\zlib\zutil.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CxImag\CxImage\tif_xfile.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximabmp.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximadsp.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximaenc.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximaexif.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximage.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximagif.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximahist.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximaico.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximainfo.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximaint.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximaj2k.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximajas.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximajbg.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximajpg.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximalpha.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximalyr.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximamng.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximapal.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximapcx.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximapng.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximasel.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximatga.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximath.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximatif.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximatran.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximawbmp.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximawmf.cpp" />
+    <ClCompile Include="CxImag\CxImage\ximawnd.cpp" />
+    <ClCompile Include="CxImag\CxImage\xmemfile.cpp" />
+    <ClCompile Include="CxImag\j2k\bio.c" />
+    <ClCompile Include="CxImag\j2k\cio.c" />
+    <ClCompile Include="CxImag\j2k\dwt.c" />
+    <ClCompile Include="CxImag\j2k\fix.c" />
+    <ClCompile Include="CxImag\j2k\int.c" />
+    <ClCompile Include="CxImag\j2k\j2k.c" />
+    <ClCompile Include="CxImag\j2k\mct.c" />
+    <ClCompile Include="CxImag\j2k\mqc.c" />
+    <ClCompile Include="CxImag\j2k\pi.c" />
+    <ClCompile Include="CxImag\j2k\t1.c" />
+    <ClCompile Include="CxImag\j2k\t2.c" />
+    <ClCompile Include="CxImag\j2k\tcd.c" />
+    <ClCompile Include="CxImag\j2k\tgt.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_cm.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_debug.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_getopt.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_icc.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_iccdata.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_image.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_init.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_malloc.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_seq.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_stream.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_string.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_tvp.c" />
+    <ClCompile Include="CxImag\jasper\base\jas_version.c" />
+    <ClCompile Include="CxImag\jasper\bmp\bmp_cod.c" />
+    <ClCompile Include="CxImag\jasper\bmp\bmp_dec.c" />
+    <ClCompile Include="CxImag\jasper\bmp\bmp_enc.c" />
+    <ClCompile Include="CxImag\jasper\jp2\jp2_cod.c" />
+    <ClCompile Include="CxImag\jasper\jp2\jp2_dec.c" />
+    <ClCompile Include="CxImag\jasper\jp2\jp2_enc.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_bs.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_cs.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_dec.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_enc.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_math.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_mct.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_mqcod.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_mqdec.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_mqenc.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_qmfb.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_t1cod.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_t1dec.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_t1enc.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_t2cod.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_t2dec.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_t2enc.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_tagtree.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_tsfb.c" />
+    <ClCompile Include="CxImag\jasper\jpc\jpc_util.c" />
+    <ClCompile Include="CxImag\jasper\jpg\jpg_dec.c" />
+    <ClCompile Include="CxImag\jasper\jpg\jpg_enc.c" />
+    <ClCompile Include="CxImag\jasper\jpg\jpg_val.c" />
+    <ClCompile Include="CxImag\jasper\mif\mif_cod.c" />
+    <ClCompile Include="CxImag\jasper\pgx\pgx_cod.c" />
+    <ClCompile Include="CxImag\jasper\pgx\pgx_dec.c" />
+    <ClCompile Include="CxImag\jasper\pgx\pgx_enc.c" />
+    <ClCompile Include="CxImag\jasper\pnm\pnm_cod.c" />
+    <ClCompile Include="CxImag\jasper\pnm\pnm_dec.c" />
+    <ClCompile Include="CxImag\jasper\pnm\pnm_enc.c" />
+    <ClCompile Include="CxImag\jasper\ras\ras_cod.c" />
+    <ClCompile Include="CxImag\jasper\ras\ras_dec.c" />
+    <ClCompile Include="CxImag\jasper\ras\ras_enc.c" />
+    <ClCompile Include="CxImag\jbig\jbig.c" />
+    <ClCompile Include="CxImag\jbig\jbig_tab.c" />
+    <ClCompile Include="CxImag\jbig\tstcodec.c" />
+    <ClCompile Include="CxImag\jpeg\jcapimin.c" />
+    <ClCompile Include="CxImag\jpeg\jcapistd.c" />
+    <ClCompile Include="CxImag\jpeg\jccoefct.c" />
+    <ClCompile Include="CxImag\jpeg\jccolor.c" />
+    <ClCompile Include="CxImag\jpeg\jcdctmgr.c" />
+    <ClCompile Include="CxImag\jpeg\jchuff.c" />
+    <ClCompile Include="CxImag\jpeg\jcinit.c" />
+    <ClCompile Include="CxImag\jpeg\jcmainct.c" />
+    <ClCompile Include="CxImag\jpeg\jcmarker.c" />
+    <ClCompile Include="CxImag\jpeg\jcmaster.c" />
+    <ClCompile Include="CxImag\jpeg\jcomapi.c" />
+    <ClCompile Include="CxImag\jpeg\jcparam.c" />
+    <ClCompile Include="CxImag\jpeg\jcphuff.c" />
+    <ClCompile Include="CxImag\jpeg\jcprepct.c" />
+    <ClCompile Include="CxImag\jpeg\jcsample.c" />
+    <ClCompile Include="CxImag\jpeg\jctrans.c" />
+    <ClCompile Include="CxImag\jpeg\jdapimin.c" />
+    <ClCompile Include="CxImag\jpeg\jdapistd.c" />
+    <ClCompile Include="CxImag\jpeg\jdatadst.c" />
+    <ClCompile Include="CxImag\jpeg\jdatasrc.c" />
+    <ClCompile Include="CxImag\jpeg\jdcoefct.c" />
+    <ClCompile Include="CxImag\jpeg\jdcolor.c" />
+    <ClCompile Include="CxImag\jpeg\jddctmgr.c" />
+    <ClCompile Include="CxImag\jpeg\jdhuff.c" />
+    <ClCompile Include="CxImag\jpeg\jdinput.c" />
+    <ClCompile Include="CxImag\jpeg\jdmainct.c" />
+    <ClCompile Include="CxImag\jpeg\jdmarker.c" />
+    <ClCompile Include="CxImag\jpeg\jdmaster.c" />
+    <ClCompile Include="CxImag\jpeg\jdmerge.c" />
+    <ClCompile Include="CxImag\jpeg\jdphuff.c" />
+    <ClCompile Include="CxImag\jpeg\jdpostct.c" />
+    <ClCompile Include="CxImag\jpeg\jdsample.c" />
+    <ClCompile Include="CxImag\jpeg\jdtrans.c" />
+    <ClCompile Include="CxImag\jpeg\jerror.c" />
+    <ClCompile Include="CxImag\jpeg\jfdctflt.c" />
+    <ClCompile Include="CxImag\jpeg\jfdctfst.c" />
+    <ClCompile Include="CxImag\jpeg\jfdctint.c" />
+    <ClCompile Include="CxImag\jpeg\jidctflt.c" />
+    <ClCompile Include="CxImag\jpeg\jidctfst.c" />
+    <ClCompile Include="CxImag\jpeg\jidctint.c" />
+    <ClCompile Include="CxImag\jpeg\jidctred.c" />
+    <ClCompile Include="CxImag\jpeg\jmemmgr.c" />
+    <ClCompile Include="CxImag\jpeg\jmemnobs.c" />
+    <ClCompile Include="CxImag\jpeg\jquant1.c" />
+    <ClCompile Include="CxImag\jpeg\jquant2.c" />
+    <ClCompile Include="CxImag\jpeg\jutils.c" />
+    <ClCompile Include="CxImag\png\png.c" />
+    <ClCompile Include="CxImag\png\pngerror.c" />
+    <ClCompile Include="CxImag\png\pnggccrd.c" />
+    <ClCompile Include="CxImag\png\pngget.c" />
+    <ClCompile Include="CxImag\png\pngmem.c" />
+    <ClCompile Include="CxImag\png\pngpread.c" />
+    <ClCompile Include="CxImag\png\pngread.c" />
+    <ClCompile Include="CxImag\png\pngrio.c" />
+    <ClCompile Include="CxImag\png\pngrtran.c" />
+    <ClCompile Include="CxImag\png\pngrutil.c" />
+    <ClCompile Include="CxImag\png\pngset.c" />
+    <ClCompile Include="CxImag\png\pngtrans.c" />
+    <ClCompile Include="CxImag\png\pngvcrd.c" />
+    <ClCompile Include="CxImag\png\pngwio.c" />
+    <ClCompile Include="CxImag\png\pngwrite.c" />
+    <ClCompile Include="CxImag\png\pngwtran.c" />
+    <ClCompile Include="CxImag\png\pngwutil.c" />
+    <ClCompile Include="CxImag\tiff\fax3sm_winnt.c" />
+    <ClCompile Include="CxImag\tiff\tif_aux.c" />
+    <ClCompile Include="CxImag\tiff\tif_close.c" />
+    <ClCompile Include="CxImag\tiff\tif_codec.c" />
+    <ClCompile Include="CxImag\tiff\tif_compress.c" />
+    <ClCompile Include="CxImag\tiff\tif_dir.c" />
+    <ClCompile Include="CxImag\tiff\tif_dirinfo.c" />
+    <ClCompile Include="CxImag\tiff\tif_dirread.c" />
+    <ClCompile Include="CxImag\tiff\tif_dirwrite.c" />
+    <ClCompile Include="CxImag\tiff\tif_dumpmode.c" />
+    <ClCompile Include="CxImag\tiff\tif_error.c" />
+    <ClCompile Include="CxImag\tiff\tif_fax3.c" />
+    <ClCompile Include="CxImag\tiff\tif_flush.c" />
+    <ClCompile Include="CxImag\tiff\tif_getimage.c" />
+    <ClCompile Include="CxImag\tiff\tif_jpeg.c" />
+    <ClCompile Include="CxImag\tiff\tif_luv.c" />
+    <ClCompile Include="CxImag\tiff\tif_lzw.c" />
+    <ClCompile Include="CxImag\tiff\tif_next.c" />
+    <ClCompile Include="CxImag\tiff\tif_ojpeg.c" />
+    <ClCompile Include="CxImag\tiff\tif_open.c" />
+    <ClCompile Include="CxImag\tiff\tif_packbits.c" />
+    <ClCompile Include="CxImag\tiff\tif_pixarlog.c" />
+    <ClCompile Include="CxImag\tiff\tif_predict.c" />
+    <ClCompile Include="CxImag\tiff\tif_print.c" />
+    <ClCompile Include="CxImag\tiff\tif_read.c" />
+    <ClCompile Include="CxImag\tiff\tif_strip.c" />
+    <ClCompile Include="CxImag\tiff\tif_swab.c" />
+    <ClCompile Include="CxImag\tiff\tif_thunder.c" />
+    <ClCompile Include="CxImag\tiff\tif_tile.c" />
+    <ClCompile Include="CxImag\tiff\tif_version.c" />
+    <ClCompile Include="CxImag\tiff\tif_warning.c" />
+    <ClCompile Include="CxImag\tiff\tif_write.c" />
+    <ClCompile Include="CxImag\tiff\tif_zip.c" />
+    <ClCompile Include="CxImag\zlib\adler32.c" />
+    <ClCompile Include="CxImag\zlib\compress.c" />
+    <ClCompile Include="CxImag\zlib\crc32.c" />
+    <ClCompile Include="CxImag\zlib\deflate.c" />
+    <ClCompile Include="CxImag\zlib\gzio.c" />
+    <ClCompile Include="CxImag\zlib\infback.c" />
+    <ClCompile Include="CxImag\zlib\inffast.c" />
+    <ClCompile Include="CxImag\zlib\inflate.c" />
+    <ClCompile Include="CxImag\zlib\inftrees.c" />
+    <ClCompile Include="CxImag\zlib\trees.c" />
+    <ClCompile Include="CxImag\zlib\uncompr.c" />
+    <ClCompile Include="CxImag\zlib\zutil.c" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CxImag\zlib\ZLIB.RC" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CxImag\doc\blank.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="CxImag\doc\cximage.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="CxImag\doc\cximage_history.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="CxImag\doc\cximage_libraries.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="CxImag\doc\doxy\html\annotated.html" />
+    <None Include="CxImag\doc\doxy\html\class_cx_image-members.html" />
+    <None Include="CxImag\doc\doxy\html\class_cx_image.html" />
+    <None Include="CxImag\doc\doxy\html\files.html" />
+    <None Include="CxImag\doc\doxy\html\functions.html" />
+    <None Include="CxImag\doc\doxy\html\functions_enum.html" />
+    <None Include="CxImag\doc\doxy\html\functions_eval.html" />
+    <None Include="CxImag\doc\doxy\html\functions_func.html" />
+    <None Include="CxImag\doc\doxy\html\functions_type.html" />
+    <None Include="CxImag\doc\doxy\html\functions_vars.html" />
+    <None Include="CxImag\doc\doxy\html\globals.html" />
+    <None Include="CxImag\doc\doxy\html\globals_defs.html" />
+    <None Include="CxImag\doc\doxy\html\globals_enum.html" />
+    <None Include="CxImag\doc\doxy\html\globals_eval.html" />
+    <None Include="CxImag\doc\doxy\html\globals_func.html" />
+    <None Include="CxImag\doc\doxy\html\globals_vars.html" />
+    <None Include="CxImag\doc\doxy\html\group___alpha.html" />
+    <None Include="CxImag\doc\doxy\html\group___attributes.html" />
+    <None Include="CxImag\doc\doxy\html\group___basic_transformations.html" />
+    <None Include="CxImag\doc\doxy\html\group___color_space.html" />
+    <None Include="CxImag\doc\doxy\html\group___constructors.html" />
+    <None Include="CxImag\doc\doxy\html\group___decode.html" />
+    <None Include="CxImag\doc\doxy\html\group___d_s_p.html" />
+    <None Include="CxImag\doc\doxy\html\group___encode.html" />
+    <None Include="CxImag\doc\doxy\html\group___initialization.html" />
+    <None Include="CxImag\doc\doxy\html\group___initializzation.html" />
+    <None Include="CxImag\doc\doxy\html\group___interpolation.html" />
+    <None Include="CxImag\doc\doxy\html\group___kernels.html" />
+    <None Include="CxImag\doc\doxy\html\group___layers.html" />
+    <None Include="CxImag\doc\doxy\html\group___painting.html" />
+    <None Include="CxImag\doc\doxy\html\group___palette.html" />
+    <None Include="CxImag\doc\doxy\html\group___pixel.html" />
+    <None Include="CxImag\doc\doxy\html\group___protected.html" />
+    <None Include="CxImag\doc\doxy\html\group___selection.html" />
+    <None Include="CxImag\doc\doxy\html\group___transformations.html" />
+    <None Include="CxImag\doc\doxy\html\index.html" />
+    <None Include="CxImag\doc\doxy\html\main.html" />
+    <None Include="CxImag\doc\doxy\html\modules.html" />
+    <None Include="CxImag\doc\doxy\html\struct_cx_image_1_1rgb__color-members.html" />
+    <None Include="CxImag\doc\doxy\html\struct_cx_image_1_1rgb__color.html" />
+    <None Include="CxImag\doc\doxy\html\struct_cx_image_1_1tag_cx_image_info-members.html" />
+    <None Include="CxImag\doc\doxy\html\struct_cx_image_1_1tag_cx_image_info.html" />
+    <None Include="CxImag\doc\doxy\html\struct_cx_image_1_1tag_cx_text_info-members.html" />
+    <None Include="CxImag\doc\doxy\html\struct_cx_image_1_1tag_cx_text_info.html" />
+    <None Include="CxImag\doc\doxy\html\tif__xfile_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\tree.html" />
+    <None Include="CxImag\doc\doxy\html\ximabmp_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximacfg_8h.html" />
+    <None Include="CxImag\doc\doxy\html\ximadef_8h.html" />
+    <None Include="CxImag\doc\doxy\html\ximadsp_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximaenc_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximaexif_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximage_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximage_8h.html" />
+    <None Include="CxImag\doc\doxy\html\ximagif_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximahist_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximaico_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximainfo_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximaint_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximaj2k_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximajas_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximajbg_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximajpg_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximalpha_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximalyr_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximamng_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximapal_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximapcx_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximapng_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximasel_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximatga_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximath_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximatif_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximatran_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximawbmp_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximawmf_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\ximawnd_8cpp.html" />
+    <None Include="CxImag\doc\doxy\html\xmemfile_8cpp.html" />
+    <None Include="CxImag\doc\top.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="CxImag\index.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="CxImag\jbig\patents.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="CxImag\tiff\libtiff.def" />
+    <None Include="CxImag\zlib\ZLIB.DEF" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

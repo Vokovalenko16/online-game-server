@@ -1,0 +1,103 @@
+<div class="block">
+  <div class="block-title">
+    <h2>Upload Level</h2>
+  </div>
+  <form
+    action="#"
+    method="post"
+    class="form-horizontal form-bordered"
+    onsubmit="return false;"
+  >
+    <div class="form-group">
+      <label class="col-md-3 control-label" for="release_id">Map Name</label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          name="level_name"
+          class="form-control"
+          placeholder="map file name required."
+          ng-model="level.name"
+        />
+      </div>
+    </div>
+    <div class="form-group form-actions">
+      <div class="col-md-9 col-md-offset-3">
+        <span class="btn btn-sm btn-primary" ng-click="upload_level()"
+          ><i class="fa fa-angle-right"></i> Upload</span
+        >
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="block">
+      <div class="block-title">
+        <h2><strong>Uploaded maps</strong></h2>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-vcenter">
+          <thead>
+            <tr>
+              <th class="text-center" style="width: 100px;">No</th>
+              <th>Map File name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              ng-repeat="level in uploaded_levels"
+              ng-if="uploaded_levels.length > 0"
+            >
+              <td class="text-center">{{ $index + 1 }}</td>
+              <td>{{ level.name }}</td>
+            </tr>
+            <tr ng-if="uploaded_levels == null || uploaded_levels.length == 0">
+              <td colspan="3" class="text-center">No Level file</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="block">
+      <!-- Products Title -->
+      <div class="block-title">
+        <h2><strong>Registered File Name</strong></h2>
+      </div>
+      <!-- END Products Title -->
+
+      <!-- Products Content -->
+      <div class="table-responsive">
+        <table class="table table-bordered table-vcenter">
+          <thead>
+            <tr>
+              <th class="text-center" style="width: 100px;">Map Id</th>
+              <th class="text-center">Map Name</th>
+              <th>File Length</th>
+              <th class="text-center">
+                Hash
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="level in levels" ng-if="levels.length > 0">
+              <td class="text-center">{{ level.id }}</td>
+              <td class="text-center">{{ level.name }}</td>
+              <td>{{ level.file_length }}</td>
+              <td class="text-center" style="font-size:10px;">
+                {{ level.hash.toString() }}
+              </td>
+            </tr>
+            <tr ng-if="levels == null || levels.length == 0">
+              <td colspan="3" class="text-center">No uploaded map</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- END Products Content -->
+    </div>
+  </div>
+</div>

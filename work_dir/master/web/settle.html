@@ -1,0 +1,94 @@
+<div class="row">
+  <div class="block">
+    <!-- Products Title -->
+    <div class="block-title">
+      <h2><strong>Settle</strong></h2>
+    </div>
+    <!-- END Products Title -->
+
+    <div class="row block">
+      <div class=" col-md-4">
+        <label class="control-label game_mode ">Start Date </label>
+        <input
+          type="date"
+          class="form-control"
+          style="width:60%; display:inline-block"
+          ng-model="settle.startDate"
+          value="{{ startDate }}"
+        />
+      </div>
+      <div class="col-md-4">
+        <label class="control-label game_mode ">End Date </label>
+        <input
+          type="date"
+          class="form-control"
+          style="width:60%; display:inline-block"
+          ng-model="settle.endDate"
+          value="{{ endDate }}"
+        />
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary" ng-click="get_total()">View</button>
+      </div>
+    </div>
+
+    <!-- Products Content -->
+    <div class="row">
+      <div class="table-responsive col-md-4">
+        <table class="table table-bordered table-vcenter">
+          <thead>
+            <tr>
+              <th class="text-center" style="width: 70px;">No</th>
+              <th class="text-center" style="width: 150px;">User</th>
+              <th class="text-center">Star</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="row in rows" ng-if="rows.length > 0">
+              <td class="text-center">{{ $index + 1 }}</td>
+              <td class="text-center">
+                <a ng-click="get_detail(row.user)">{{ row.user }}</a>
+              </td>
+              <td>{{ row.money }}</td>
+            </tr>
+            <tr ng-if="rows.length > 0">
+              <td colspan="3">
+                <b>Total:{{ total_amount }}</b>
+              </td>
+            </tr>
+            <tr ng-if="rows == null || rows.length == 0">
+              <td colspan="3" class="text-center">No result</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive col-md-8">
+        <table class="table table-bordered table-vcenter">
+          <thead>
+            <tr>
+              <th class="text-center">Date</th>
+              <th class="text-center">Equipment name</th>
+              <th class="text-center">Equipment count</th>
+              <th class="text-center">Star</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="row in detail_rows" ng-if="detail_rows.length > 0">
+              <td class="text-center">
+                {{ row.date_time | date: "yyyy-MM-dd hh:mm:ss" }}
+              </td>
+              <td>{{ row.item }}</td>
+              <td>{{ row.item_change }}</td>
+              <td>{{ row.star_change }}</td>
+            </tr>
+            <tr ng-if="detail_rows == null || detail_rows.length == 0">
+              <td colspan="4" class="text-center">No result</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- END Products Content -->
+  </div>
+</div>

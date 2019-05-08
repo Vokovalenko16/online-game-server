@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<script type="text/javascript" src="jquery-2.1.3.js"></script>
+	<script type="text/javascript">
+
+        function on_load() {
+            target_url.value = "/";
+
+            var url, slash_pos;
+            url = document.URL;
+            slash_pos = url.lastIndexOf('/');
+            url_prefix.value = url.substr(0, slash_pos);
+        }
+
+        function submit() {
+            var url;
+			url = url_prefix.value + target_url.value;
+
+            $.post(
+                url,
+                request_pane.value,
+                function (resp) {
+                    result_pane.value = resp;
+                },
+                "text")
+                .fail(function () {
+                    result_pane.value = "Failed!";
+                });
+        }
+	</script>
+</head>
+<body onload="on_load();">
+	<table style="width:100%">
+		<tr>
+			<td style="width:100%">
+				<span>Target URL:</span>
+				<input type="text" id="url_prefix"/>
+				<input style="width:400px" type="text" id="target_url" />
+			</td>
+		</tr>
+		<tr>
+			<td style="width:100%">
+				<textarea style="width:100%; height:200px" id="request_pane"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="submit()">Execute</button>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:100%">
+				<textarea style="width:100%; height:200px" id="result_pane"></textarea>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

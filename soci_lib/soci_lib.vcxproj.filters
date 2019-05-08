@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\backends\sqlite\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\backends\sqlite\soci-sqlite3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\blob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\blob-exchange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\boost-fusion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\boost-gregorian-date.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\boost-optional.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\boost-tuple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\connection-pool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\exchange-traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\into.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\into-type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\once-temp-type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\prepare-temp-type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\procedure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\ref-counted-prepare-info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\ref-counted-statement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\row.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\row-exchange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\rowid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\rowid-exchange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\rowset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\session.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\soci.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\soci-backend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\soci-config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\soci-platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\soci-simple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\statement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\transaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\type-conversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\type-conversion-traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\type-holder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\type-ptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\unsigned-types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\use.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\use-type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\values.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\values-exchange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soci\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlite\sqlite3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlite\sqlite3ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_blob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_row-id.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_session.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_standard-into-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_standard-use-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_statement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_vector-into-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_vector-use-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\blob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\connection-pool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\error.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\into-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\once-temp-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\prepare-temp-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\procedure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\ref-counted-prepare-info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\ref-counted-statement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\row.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\rowid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\session.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\soci-simple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\statement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\transaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\use-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soci\values.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlite\sqlite3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Admin</title>
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1.0"
+    />
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="favicon.png" />
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Bootstrap is included in its original form, unaltered -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/toastr.min.css" />
+
+    <!-- Related styles of various icon packs and plugins -->
+    <link rel="stylesheet" href="assets/css/plugins.css" />
+
+    <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- The themes stylesheet of this template (for using specific theme color in individual elements - must included last) -->
+    <link rel="stylesheet" href="assets/css/themes.css" />
+    <!-- END Stylesheets -->
+
+    <!-- Modernizr (browser feature detection library) & Respond.js (Enable responsive CSS code on browsers that don't support it, eg IE8) -->
+    <script src="assets/js/vendor/modernizr-2.7.1-respond-1.4.2.min.js"></script>
+
+    <script src="app/uriUtil.js"></script>
+  </head>
+  <body ng-app="WebApp">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+      <!-- Page Container -->
+      <div
+        id="page-container"
+        class="sidebar-partial sidebar-visible-lg sidebar-no-animations"
+      >
+        <div data-ng-include="'tpl/sidebar.html'"></div>
+
+        <!-- Main Container -->
+        <div id="main-container">
+          <div data-ng-include="'tpl/header.html'"></div>
+          <!-- Page content -->
+          <div id="page-content">
+            <div data-ng-include="'tpl/page_head.html'"></div>
+
+            <div ui-view="" class="fade-in-up"></div>
+          </div>
+          <!-- END Page Content -->
+          <div data-ng-include="'tpl/footer.html'"></div>
+        </div>
+        <!-- END Main Container -->
+      </div>
+      <!-- END Page Container -->
+    </div>
+    <!-- END Page Wrapper -->
+
+    <!-- Scroll to top link, initialized in js/app.js - scrollToTop() -->
+    <a href="#" id="to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <script src="assets/js/vendor/jquery-1.11.1.min.js"></script>
+
+    <!-- Bootstrap.js, Jquery plugins and Custom JS code -->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/toastr.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/moment.js"></script>
+    <script src="assets/js/crypto-js.js"></script>
+    <script src="assets/js/vendor/angular.min.js"></script>
+    <script src="assets/js/vendor/angular-ui-router.min.js"></script>
+    <script src="assets/js/vendor/angular-sanitize.min.js"></script>
+    <script src="assets/js/vendor/ui-bootstrap-tpls.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/directives.js"></script>
+    <script src="app/services.js"></script>
+    <script src="app/controllers/UserController.js"></script>
+    <script src="app/controllers/JobController.js"></script>
+    <script src="app/controllers/GameController.js"></script>
+    <script src="app/controllers/LevelController.js"></script>
+    <script src="app/controllers/UploadController.js"></script>
+    <script src="app/controllers/SettleController.js"></script>
+  </body>
+</html>

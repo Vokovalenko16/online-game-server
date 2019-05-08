@@ -1,0 +1,41 @@
+<!-- Main Sidebar -->
+<div id="sidebar" ng-controller="SidebarController">
+    <!-- Wrapper for scrolling functionality -->
+    <div id="sidebar-scroll">
+        <!-- Sidebar Content -->
+        <div class="sidebar-content">
+            <!-- Brand -->
+            <a href="#" class="sidebar-brand">
+                <i class="gi gi-flash"></i>
+                <span class="sidebar-nav-mini-hide"><strong>지름길</strong>관리자페지</span>
+            </a>
+            <!-- END Brand -->
+
+            <!-- Sidebar Navigation -->
+            <ul class="sidebar-nav">
+               <!-- <li ng-class="page == 'users' ? 'active' : ''">
+                    <a href="#/users"><i class="gi gi-notes sidebar-nav-icon"></i> <span class="sidebar-nav-mini-hide">Users</span></a>
+                </li> -->
+                <li ng-class="page == 'jobs' ? 'active' : ''">
+                    <a href="#/jobs"><i class="gi gi-notes sidebar-nav-icon"></i> <span class="sidebar-nav-mini-hide">처리작업목록</span></a>
+                </li>
+                <li ng-class="page == 'games' ? 'active' : ''">
+                    <a href="#/games"><i class="gi gi-heart sidebar-nav-icon"></i> <span class="sidebar-nav-mini-hide">경기</span></a>
+                </li>
+                <li ng-class="page == 'levels' ? 'active' : ''">
+                    <a href="#/levels"><i class="gi gi-google_maps sidebar-nav-icon"></i> <span class="sidebar-nav-mini-hide">지형</span></a>
+                </li>
+                <li ng-class="page == 'upload' ? 'active' : ''">
+                    <a href="#/upload"><i class="gi gi-cloud-upload sidebar-nav-icon"></i> <span class="sidebar-nav-mini-hide">새 판본 올리기</span></a>
+                </li>
+                <li ng-class="page == 'settle' ? 'active' : ''">
+                    <a href="#/settle"><i class="gi gi-calculator sidebar-nav-icon"></i> <span class="sidebar-nav-mini-hide">결산</span></a>
+                </li>
+            </ul>
+            <!-- END Sidebar Navigation -->
+        </div>
+        <!-- END Sidebar Content -->
+    </div>
+    <!-- END Wrapper for scrolling functionality -->
+</div>
+<!-- END Main Sidebar -->

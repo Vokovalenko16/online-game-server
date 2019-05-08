@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{AD76CAAA-6AE2-4098-9322-049BA8DF9D16}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>masterserver</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOCI_USE_BOOST;BOOST_NO_ANSI_APIS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)/OpenSSL/include;$(SolutionDir)protocol/include;$(SolutionDir)soci_lib;$(SolutionDir)CryptoPP;$(SolutionDir)MessageServer_lib</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcprtd.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOCI_USE_BOOST;BOOST_NO_ANSI_APIS;_WINSOCK_DEPRECATED_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)/OpenSSL/include;$(SolutionDir)protocol/include;$(SolutionDir)soci_lib;$(SolutionDir)CryptoPP;$(SolutionDir)MessageServer_lib</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcprtd.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /y $(ProjectDir)master_server.db $(SolutionDir)work_dir\master\master_server.db</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copying database...</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOCI_USE_BOOST;BOOST_NO_ANSI_APIS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)/OpenSSL/include;$(SolutionDir)protocol/include;$(SolutionDir)soci_lib;$(SolutionDir)CryptoPP;$(SolutionDir)MessageServer_lib</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcprtd.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /y $(TargetPath) $(SolutionDir)work_dir\master\master_server.exe
+copy /y $(ProjectDir)master_server.db $(SolutionDir)work_dir\master\master_server.db</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copying program and database...</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOCI_USE_BOOST;BOOST_NO_ANSI_APIS;_WINSOCK_DEPRECATED_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)/OpenSSL/include;$(SolutionDir)protocol/include;$(SolutionDir)soci_lib;$(SolutionDir)CryptoPP;$(SolutionDir)MessageServer_lib</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcprtd.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /y $(ProjectDir)master_server.db $(SolutionDir)work_dir\master\master_server.db</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copying database...</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="db\Equipment.h" />
+    <ClInclude Include="db\Equip_history.h" />
+    <ClInclude Include="db\Equip_list.h" />
+    <ClInclude Include="db\GameDB.h" />
+    <ClInclude Include="db\GameHistoryDB.h" />
+    <ClInclude Include="db\GameRecordDB.h" />
+    <ClInclude Include="db\Level.h" />
+    <ClInclude Include="db\LevelFileBlock.h" />
+    <ClInclude Include="db\Member.h" />
+    <ClInclude Include="db\Token.h" />
+    <ClInclude Include="db\User.h" />
+    <ClInclude Include="service\ChildServerAdminServices.h" />
+    <ClInclude Include="service\GameService.h" />
+    <ClInclude Include="game\Game.h" />
+    <ClInclude Include="game\GameManager.h" />
+    <ClInclude Include="service\CommonClientServices.h" />
+    <ClInclude Include="service\GameAdminServices.h" />
+    <ClInclude Include="service\ItemServices.h" />
+    <ClInclude Include="service\LaunchGameJob.h" />
+    <ClInclude Include="service\LevelUploadJob.h" />
+    <ClInclude Include="service\LevelServices.h" />
+    <ClInclude Include="service\LoadGameServices.h" />
+    <ClInclude Include="service\MasterServerConfig.h" />
+    <ClInclude Include="game\PortManager.h" />
+    <ClInclude Include="service\ScoreServices.h" />
+    <ClInclude Include="service\TokenServices.h" />
+    <ClInclude Include="service\UserManageServices.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="db\Equipment.cpp" />
+    <ClCompile Include="db\Equip_history.cpp" />
+    <ClCompile Include="db\Equip_list.cpp" />
+    <ClCompile Include="db\GameDB.cpp" />
+    <ClCompile Include="db\GameHistoryDB.cpp" />
+    <ClCompile Include="db\GameRecordDB.cpp" />
+    <ClCompile Include="db\Level.cpp" />
+    <ClCompile Include="db\LevelFileBlock.cpp" />
+    <ClCompile Include="db\Member.cpp" />
+    <ClCompile Include="db\Token.cpp" />
+    <ClCompile Include="db\User.cpp" />
+    <ClCompile Include="service\ChildServerAdminServices.cpp" />
+    <ClCompile Include="service\GameService.cpp" />
+    <ClCompile Include="game\Game.cpp" />
+    <ClCompile Include="game\GameManager.cpp" />
+    <ClCompile Include="master_server.cpp" />
+    <ClCompile Include="service\CommonClientServices.cpp" />
+    <ClCompile Include="service\GameAdminServices.cpp" />
+    <ClCompile Include="service\ItemServices.cpp" />
+    <ClCompile Include="service\LaunchGameJob.cpp" />
+    <ClCompile Include="game\PortManager.cpp" />
+    <ClCompile Include="service\LevelUploadJob.cpp" />
+    <ClCompile Include="service\LevelServices.cpp" />
+    <ClCompile Include="service\LoadGameServices.cpp" />
+    <ClCompile Include="service\ScoreServices.cpp" />
+    <ClCompile Include="service\TokenServices.cpp" />
+    <ClCompile Include="service\UserManageServices.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="master_server.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoPP\CryptoPP.vcxproj">
+      <Project>{2c7aa7e2-9c23-41f6-92c2-2c8f6a5db37f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MessageServer_lib\MessageServer_lib.vcxproj">
+      <Project>{45cc3bda-7fee-41d9-976e-00bf0cc034ad}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenSSL\OpenSSL.vcxproj">
+      <Project>{40fc4e67-0d55-46b6-ae58-784721795a21}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\protocol\protocol.vcxproj">
+      <Project>{1e744ff6-5aa1-4e78-b5a0-edac71924933}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\soci_lib\soci_lib.vcxproj">
+      <Project>{8ca9595e-29b4-40a7-b03f-4773a5acaf89}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="doc\Web Methods.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

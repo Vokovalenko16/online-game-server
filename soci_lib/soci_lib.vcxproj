@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{8CA9595E-29B4-40A7-B03F-4773A5ACAF89}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>socilib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Air\Documents\boost_1_55\include;$(IncludePath);$(ProjectDir)soci</IncludePath>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Air\Documents\boost_1_55\include;$(IncludePath);$(ProjectDir)soci</IncludePath>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\Air\Documents\boost_1_55\include;$(IncludePath);$(ProjectDir)soci</IncludePath>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\Air\Documents\boost_1_55\include;$(IncludePath);$(ProjectDir)soci</IncludePath>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOCI_USE_BOOST;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOCI_USE_BOOST;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOCI_USE_BOOST;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOCI_USE_BOOST;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="soci\backends\sqlite\common.h" />
+    <ClInclude Include="soci\backends\sqlite\soci-sqlite3.h" />
+    <ClInclude Include="soci\blob-exchange.h" />
+    <ClInclude Include="soci\blob.h" />
+    <ClInclude Include="soci\boost-fusion.h" />
+    <ClInclude Include="soci\boost-gregorian-date.h" />
+    <ClInclude Include="soci\boost-optional.h" />
+    <ClInclude Include="soci\boost-tuple.h" />
+    <ClInclude Include="soci\connection-pool.h" />
+    <ClInclude Include="soci\error.h" />
+    <ClInclude Include="soci\exchange-traits.h" />
+    <ClInclude Include="soci\into-type.h" />
+    <ClInclude Include="soci\into.h" />
+    <ClInclude Include="soci\once-temp-type.h" />
+    <ClInclude Include="soci\prepare-temp-type.h" />
+    <ClInclude Include="soci\procedure.h" />
+    <ClInclude Include="soci\ref-counted-prepare-info.h" />
+    <ClInclude Include="soci\ref-counted-statement.h" />
+    <ClInclude Include="soci\row-exchange.h" />
+    <ClInclude Include="soci\row.h" />
+    <ClInclude Include="soci\rowid-exchange.h" />
+    <ClInclude Include="soci\rowid.h" />
+    <ClInclude Include="soci\rowset.h" />
+    <ClInclude Include="soci\session.h" />
+    <ClInclude Include="soci\soci-backend.h" />
+    <ClInclude Include="soci\soci-config.h" />
+    <ClInclude Include="soci\soci-platform.h" />
+    <ClInclude Include="soci\soci-simple.h" />
+    <ClInclude Include="soci\soci.h" />
+    <ClInclude Include="soci\statement.h" />
+    <ClInclude Include="soci\transaction.h" />
+    <ClInclude Include="soci\type-conversion-traits.h" />
+    <ClInclude Include="soci\type-conversion.h" />
+    <ClInclude Include="soci\type-holder.h" />
+    <ClInclude Include="soci\type-ptr.h" />
+    <ClInclude Include="soci\unsigned-types.h" />
+    <ClInclude Include="soci\use-type.h" />
+    <ClInclude Include="soci\use.h" />
+    <ClInclude Include="soci\values-exchange.h" />
+    <ClInclude Include="soci\values.h" />
+    <ClInclude Include="soci\version.h" />
+    <ClInclude Include="sqlite\sqlite3.h" />
+    <ClInclude Include="sqlite\sqlite3ext.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_blob.cpp" />
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_common.cpp" />
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_factory.cpp" />
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_row-id.cpp" />
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_session.cpp" />
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_standard-into-type.cpp" />
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_standard-use-type.cpp" />
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_statement.cpp" />
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_vector-into-type.cpp" />
+    <ClCompile Include="soci\backends\sqlite\soci_sqlite3_vector-use-type.cpp" />
+    <ClCompile Include="soci\blob.cpp" />
+    <ClCompile Include="soci\connection-pool.cpp" />
+    <ClCompile Include="soci\error.cpp" />
+    <ClCompile Include="soci\into-type.cpp" />
+    <ClCompile Include="soci\once-temp-type.cpp" />
+    <ClCompile Include="soci\prepare-temp-type.cpp" />
+    <ClCompile Include="soci\procedure.cpp" />
+    <ClCompile Include="soci\ref-counted-prepare-info.cpp" />
+    <ClCompile Include="soci\ref-counted-statement.cpp" />
+    <ClCompile Include="soci\row.cpp" />
+    <ClCompile Include="soci\rowid.cpp" />
+    <ClCompile Include="soci\session.cpp" />
+    <ClCompile Include="soci\soci-simple.cpp" />
+    <ClCompile Include="soci\statement.cpp" />
+    <ClCompile Include="soci\transaction.cpp" />
+    <ClCompile Include="soci\use-type.cpp" />
+    <ClCompile Include="soci\values.cpp" />
+    <ClCompile Include="sqlite\sqlite3.c" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

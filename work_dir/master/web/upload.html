@@ -1,0 +1,124 @@
+<div class="block">
+  <!-- Basic Form Elements Title -->
+  <div class="block-title">
+    <h2>Upload New Version</h2>
+  </div>
+  <!-- END Form Elements Title -->
+
+  <!-- Basic Form Elements Content -->
+  <form
+    action="#"
+    method="post"
+    class="form-horizontal form-bordered"
+    onsubmit="return false;"
+  >
+    <div class="form-group">
+      <label class="col-md-3 control-label" for="release_id">Version ID</label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          name="release_id"
+          class="form-control"
+          placeholder="Version ID(number required)"
+          ng-model="release.id"
+        />
+        <span class="help-block">VersionID</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-3 control-label" for="release_name"
+        >Version name</label
+      >
+      <div class="col-md-9">
+        <input
+          type="text"
+          name="release_name"
+          class="form-control"
+          placeholder="Version"
+          ng-model="release.name"
+        />
+        <span class="help-block">Version Name</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-3 control-label" for="path">path</label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          name="physical_path"
+          class="form-control"
+          placeholder="You should specify correct path"
+          ng-model="release.physical_path"
+        />
+        <span class="help-block">path</span>
+      </div>
+    </div>
+    <!--
+        <div class="form-group">
+            <label class="col-md-3 control-label" for="path">Logical Path</label>
+            <div class="col-md-9">
+                <input type="text" name="logical_path" class="form-control" placeholder="Logical Path" ng-model="release.logical_path">
+                <span class="help-block">Logical Path</span>
+            </div>
+        </div>-->
+    <div class="form-group form-actions">
+      <div class="col-md-9 col-md-offset-3">
+        <span class="btn btn-sm btn-primary" ng-click="add_release()"
+          ><i class="fa fa-angle-right"></i> Upload</span
+        >
+      </div>
+    </div>
+  </form>
+  <!-- END Basic Form Elements Content -->
+</div>
+<div class="block">
+  <!-- Products Title -->
+  <div class="block-title">
+    <h2><strong>Version List</strong></h2>
+  </div>
+  <!-- END Products Title -->
+
+  <!-- Products Content -->
+  <div class="table-responsive">
+    <table class="table table-bordered table-vcenter">
+      <thead>
+        <tr>
+          <th class="text-center" style="width: 100px;">Version Id</th>
+          <th class="text-center">Version Name</th>
+          <th>Activate</th>
+          <th class="text-center">
+            File Count
+          </th>
+          <th class="text-center">Activate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="release in releases" ng-if="releases.length > 0">
+          <td class="text-center">{{ release.id }}</td>
+          <td class="text-center">{{ release.name }}</td>
+          <td>{{ release.active }}</td>
+          <td class="text-center">{{ release.file_count }}</td>
+          <td class="text-center">
+            <!--<span class="release.active==0?'btn_active':'btn_deactive' btn btn-xs btn-info" ng-click="set_active(release.id, $index)">Active</span>-->
+            <button
+              ng-if="release.active == 0"
+              ng-click="set_active(release.id, $index, 1)"
+            >
+              Activate
+            </button>
+            <button
+              ng-if="release.active != 0"
+              ng-click="set_active(release.id, $index, 0)"
+            >
+              Deactivate
+            </button>
+          </td>
+        </tr>
+        <tr ng-if="releases == null || releases.length == 0">
+          <td colspan="3" class="text-center">No uploaded version</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- END Products Content -->
+</div>
